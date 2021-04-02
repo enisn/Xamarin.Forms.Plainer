@@ -17,7 +17,7 @@ namespace Sandbox.Plainer.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-            //global::Xamarin.Forms.Plainer.Plainer.Init(this, savedInstanceState);
+            global::Plugin.Plainer.Platforms.Droid.Plainer.Init(this, savedInstanceState);
 
             LoadApplication(new App());
         }

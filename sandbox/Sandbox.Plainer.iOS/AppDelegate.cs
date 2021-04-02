@@ -24,7 +24,7 @@ namespace Sandbox.Plainer.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            //global::Xamarin.Forms.Plainer.Plainer.Init();
+            global::Plugin.Plainer.Platforms.iOS.Plainer.Init();
 
             LoadApplication(new App());
 
