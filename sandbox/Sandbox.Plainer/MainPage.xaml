@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              xmlns:controls="clr-namespace:Plugin.Plainer.Shared.Controls;assembly=Plugin.Plainer"
+             ios:Page.UseSafeArea="True"
              x:Class="Sandbox.Plainer.MainPage">
 
     <ScrollView>
-        <StackLayout Spacing="10">
+        <StackLayout Spacing="20" Padding="40,20">
             <StackLayout>
                 <Label Text="EntryView"/>
-                <controls:EntryView BackgroundColor="WhiteSmoke"/>
+                <controls:EntryView TextColor="Blue" Placeholder="Type here..."/>
             </StackLayout>
 
             <StackLayout>
