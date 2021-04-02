@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:controls="clr-namespace:Plugin.Plainer.Shared.Controls;assembly=Plugin.Plainer"
+             x:Class="Sandbox.Plainer.MainPage">
+
+    <ScrollView>
+        <StackLayout Spacing="10">
+            <StackLayout>
+                <Label Text="EntryView"/>
+                <controls:EntryView BackgroundColor="WhiteSmoke"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Coming soon..."/>
+                <!--Place here next control-->
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,127 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+
+  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
+
+  <PropertyGroup>
+    <!--Work around so the conditions work below-->
+    <!--<TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">netstandard1.0;netstandard2.0;Xamarin.iOS10;MonoAndroid90;MonoAndroid10.0;uap10.0.16299</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">netstandard1.0;netstandard2.0;Xamarin.iOS10;MonoAndroid90;MonoAndroid10.0</TargetFrameworks>-->
+
+    <TargetFrameworks>netstandard2.0;netstandard1.0;MonoAndroid90;MonoAndroid10.0;MonoAndroid11.0;Xamarin.iOS10;uap10.0.19041</TargetFrameworks>
+    <!--Feel free to add as many targets as you need below
+    netstandard1.0;netstandard2.0;MonoAndroid90;Xamarin.iOS10;uap10.0.16299;Xamarin.TVOS10;Xamarin.WatchOS10;Xamarin.Mac20;Tizen40
+    For UWP update the version number with a version number you have installed.
+    -->
+    <AssemblyName>Plugin.Plainer</AssemblyName>
+    <RootNamespace>Plugin.Plainer</RootNamespace>
+    <PackageId>Plugin.Plainer</PackageId>
+
+    <Product>$(AssemblyName) ($(TargetFramework))</Product>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+    <Version>1.0.0.0</Version>
+    <PackageVersion>1.0.0.0</PackageVersion>
+    <PackOnBuild>false</PackOnBuild>
+    <NeutralLanguage>en</NeutralLanguage>
+    <LangVersion>default</LangVersion>
+    <DefineConstants>$(DefineConstants);</DefineConstants>
+
+    <UseFullSemVerForNuGet>false</UseFullSemVerForNuGet>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+
+    <LangVersion>latest</LangVersion>
+    <DebugType>portable</DebugType>
+
+    <!--TODO: Fill these in-->
+    <PackageLicenseUrl>LINK TO LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>LINK TO PROJECT</PackageProjectUrl>
+    <RepositoryUrl>LINK TO PROJECT</RepositoryUrl>
+    <PackageReleaseNotes>RELEASE NOTES</PackageReleaseNotes>
+    <PackageIconUrl>ICON URL</PackageIconUrl>
+    <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, Plainer</PackageTags>
+
+    <Title>Plainer Plugin for Xamarin and Windows</Title>
+    <Summary>Summary of nuget</Summary>
+    <Description>Plugin Description</Description>
+
+
+    <Owners>YOU</Owners>
+    <Authors>YOU</Authors>
+    <Copyright>Copyright 2019</Copyright>
+
+    <!--When built in 2019 will remove extra references on pack-->
+    <DisableExtraReferences>true</DisableExtraReferences>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1364" PrivateAssets="All" />
+    <Compile Include="Shared\**\*.cs" />
+  </ItemGroup>
+ 
+  <!--ANDROID 9.0 AND ANDROID 10.0-->
+  <ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid11.0' OR '$(TargetFramework)' == 'MonoAndroid10.0' OR '$(TargetFramework)' == 'MonoAndroid90' OR '$(TargetFramework)' == 'MonoAndroid81'">
+    <Compile Include="Platforms\Droid\**\*.cs" />
+
+    <AndroidResource Include="Platforms\Droid\Resources\drawable\*.xml" />
+    <AndroidResource Include="Platforms\Droid\Resources\drawable\*.png" />
+    <AndroidResource Include="Platforms\Droid\Resources\drawable-hdpi\*.png" />
+    <AndroidResource Include="Platforms\Droid\Resources\drawable-xhdpi\*.png" />
+    <AndroidResource Include="Platforms\Droid\Resources\drawable-xxhdpi\*.png" />
+    <AndroidResource Include="Platforms\Droid\Resources\drawable-xxxhdpi\*.png" />
+    <AndroidResource Include="Platforms\Droid\Resources\values\*.xml" />
+  </ItemGroup>
+
+  <!--IOS-->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'Xamarin.iOS10' ">
+    <Compile Include="Platforms\iOS\**\*.cs" />
+
+    <BundleResource Include="Platforms\iOS\Resources\*.png" />
+  </ItemGroup>
+
+  <!--UWP-->
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.0.6" />
+    <Compile Include="Platforms\UWP\**\*.cs" />
+    <!--
+    If you need to add sdk references:
+     <SDKReference Include="WindowsMobile, Version=10.0.16299.0">
+      <Name>Windows Mobile Extensions for the UWP</Name>
+    </SDKReference>
+    -->
+  </ItemGroup>
+
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'Xamarin.TVOS10' ">
+    <Compile Include="Platforms\TVOS\**\*.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'Xamarin.WatchOS10' ">
+    <Compile Include="Platforms\WatchOS\**\*.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'Xamarin.Mac20' ">
+    <Compile Include="Platforms\macOS\**\*.cs" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <EmbeddedResource Include="Shared\Resources\**\*.png" />
+    <EmbeddedResource Include="Shared\Resources\**\*.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Platforms\Droid\Resources\drawable-hdpi\" />
+    <Folder Include="Platforms\Droid\Resources\drawable-xhdpi\" />
+    <Folder Include="Platforms\Droid\Resources\drawable-xxhdpi\" />
+    <Folder Include="Platforms\Droid\Resources\drawable-xxxhdpi\" />
+    <Folder Include="Platforms\Droid\Resources\drawable\" />
+    <Folder Include="Platforms\iOS\Resources\" />
+    <Folder Include="Shared\Resources\" />
+  </ItemGroup>
+
+  <Import Project="inputkit.targets" Condition="Exists('inputkit.targets')" />
+  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
+</Project>
