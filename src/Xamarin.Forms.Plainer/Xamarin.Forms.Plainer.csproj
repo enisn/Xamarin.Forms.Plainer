@@ -18,10 +18,7 @@
     <PackageId>Plugin.Plainer</PackageId>
 
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
-    <Version>1.0.0.0</Version>
-    <PackageVersion>1.0.0.0</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <PackOnBuild>false</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
     <LangVersion>default</LangVersion>
@@ -33,22 +30,20 @@
     <LangVersion>latest</LangVersion>
     <DebugType>portable</DebugType>
 
-    <!--TODO: Fill these in-->
     <PackageLicenseUrl>LINK TO LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>LINK TO PROJECT</PackageProjectUrl>
-    <RepositoryUrl>LINK TO PROJECT</RepositoryUrl>
-    <PackageReleaseNotes>RELEASE NOTES</PackageReleaseNotes>
-    <PackageIconUrl>ICON URL</PackageIconUrl>
-    <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, Plainer</PackageTags>
+    <PackageProjectUrl>https://github.com/enisn/Xamarin.Forms.Plainer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/enisn/Xamarin.Forms.Plainer</RepositoryUrl>
+    <PackageReleaseNotes>Initial Release</PackageReleaseNotes>
+    <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, Plainer, empty, empty entry</PackageTags>
 
-    <Title>Plainer Plugin for Xamarin and Windows</Title>
-    <Summary>Summary of nuget</Summary>
-    <Description>Plugin Description</Description>
+    <Title>Xamarin Forms Plainer</Title>
+    <Summary>Removes visual effects from controls and makes them plain.</Summary>
+    <Description>This library removes all visual effects from controls and makes them easy to style from portable layer instead of writing custom renderers always.</Description>
 
 
-    <Owners>YOU</Owners>
-    <Authors>YOU</Authors>
-    <Copyright>Copyright 2019</Copyright>
+    <Owners>enisn</Owners>
+    <Authors>enisn</Authors>
+    <Copyright>Copyright 2021</Copyright>
 
     <!--When built in 2019 will remove extra references on pack-->
     <DisableExtraReferences>true</DisableExtraReferences>
