@@ -47,6 +47,8 @@
 
     <!--When built in 2019 will remove extra references on pack-->
     <DisableExtraReferences>true</DisableExtraReferences>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl />
   </PropertyGroup>
 
 
@@ -116,6 +118,13 @@
     <Folder Include="Platforms\Droid\Resources\drawable\" />
     <Folder Include="Platforms\iOS\Resources\" />
     <Folder Include="Shared\Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\art\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
   
   <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
