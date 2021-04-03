@@ -13,7 +13,6 @@
                 <controls:EntryView TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}"/>
             </StackLayout>
 
-
             <StackLayout>
                 <Label Text="Picker"/>
                 <controls:PickerView TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}">
@@ -25,6 +24,11 @@
                         </x:Array>
                     </controls:PickerView.ItemsSource>
                 </controls:PickerView>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Editor"/>
+                <controls:EditorView HeightRequest="120" TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}"/>
             </StackLayout>
 
             <StackLayout>

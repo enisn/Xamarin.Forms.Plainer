@@ -123,6 +123,11 @@
     <Folder Include="Shared\Resources\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Shared\Controls\EditorView.cs">
+      <SubType></SubType>
+    </Compile>
+  </ItemGroup>
   <Import Project="inputkit.targets" Condition="Exists('inputkit.targets')" />
   <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
 </Project>
