@@ -133,7 +133,7 @@
       <Name>Xamarin.Forms.Plainer</Name>
     </ProjectReference>
     <ProjectReference Include="..\Sandbox.Plainer\Sandbox.Plainer.csproj">
-      <Project>{90C31C3B-CCF4-4BFF-9B32-4991FB1119B2}</Project>
+      <Project>{49001A67-A28B-4FAF-BE9F-98D89923842B}</Project>
       <Name>Sandbox.Plainer</Name>
     </ProjectReference>
   </ItemGroup>

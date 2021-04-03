@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sandbox.Plainer.App">
     <Application.Resources>
-
+        <ResourceDictionary>
+            <Color x:Key="TextColor">Blue</Color>
+            <Color x:Key="BackgroundColor">WhiteSmoke</Color>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -10,13 +10,29 @@
         <StackLayout Spacing="20" Padding="40,20">
             <StackLayout>
                 <Label Text="EntryView"/>
-                <controls:EntryView TextColor="Blue" Placeholder="Type here..."/>
+                <controls:EntryView TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}"/>
+            </StackLayout>
+
+
+            <StackLayout>
+                <Label Text="Picker"/>
+                <controls:PickerView TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}">
+                    <controls:PickerView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Option 1</x:String>
+                            <x:String>Option 2</x:String>
+                            <x:String>Option 3</x:String>
+                        </x:Array>
+                    </controls:PickerView.ItemsSource>
+                </controls:PickerView>
             </StackLayout>
 
             <StackLayout>
-                <Label Text="Coming soon..."/>
+                <Label Text="Coming Soon"/>
                 <!--Place here next control-->
+
             </StackLayout>
+
         </StackLayout>
     </ScrollView>
 
