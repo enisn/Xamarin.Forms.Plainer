@@ -18,7 +18,7 @@
     <PackageId>Plugin.Plainer</PackageId>
 
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.1.0</PackageVersion>
     <PackOnBuild>false</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
     <LangVersion>default</LangVersion>

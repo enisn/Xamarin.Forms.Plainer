@@ -25,7 +25,6 @@ namespace Plugin.Plainer.Platforms.Droid.Renderers
                 {
                     gradientDrawable.SetColor(global::Android.Graphics.Color.Transparent);
                     this.Control.SetBackground(gradientDrawable);
-                    Control.SetTextColor(Element.TextColor.ToAndroid());
                 }
             }
         }
