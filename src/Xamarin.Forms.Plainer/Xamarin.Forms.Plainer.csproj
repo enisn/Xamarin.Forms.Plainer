@@ -15,7 +15,7 @@
     -->
     <AssemblyName>Plugin.Plainer</AssemblyName>
     <RootNamespace>Plugin.Plainer</RootNamespace>
-    <PackageId>Plugin.Plainer</PackageId>
+    <PackageId>Xamarin.Forms.Plainer</PackageId>
 
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
     <PackageVersion>1.1.0</PackageVersion>
