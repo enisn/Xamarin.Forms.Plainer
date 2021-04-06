@@ -1,16 +1,17 @@
-
 <p align="center">
-  <img src="art/icon.svg" width="20%" />
+  <img src="art/cover.svg" width="100%" alt="icon" />
 </p>
 
 # Xamarin.Forms.Plainer
 This library removes all visual effects from controls and makes them easy to style from portable layer instead of writing custom renderers always.
 No underlines, no borders, no background colors. Just interactive fields without visual effect.
 
-<hr />
+***
 
 [![CodeFactor](https://www.codefactor.io/repository/github/enisn/xamarin.forms.plainer/badge)](https://www.codefactor.io/repository/github/enisn/xamarin.forms.plainer)
 [![Nuget](https://img.shields.io/nuget/v/Xamarin.Forms.Plainer)](https://www.nuget.org/packages/Xamarin.Forms.Plainer/)
+
+***
 
 ## Set-up
 
