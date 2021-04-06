@@ -18,7 +18,6 @@ namespace Plugin.Plainer.Platforms.iOS.Renderers
             if (Control != null && e.NewElement != null)
             {
                 Control.BorderStyle = UITextBorderStyle.None;
-                Control.TextColor = Element.TextColor.ToUIColor();
             }
         }
     }
