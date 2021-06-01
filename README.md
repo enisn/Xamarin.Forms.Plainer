@@ -65,7 +65,7 @@ No underlines, no borders, no background colors. Just interactive fields without
   <plain:EntryView/>
   ```
 
-  This will be completely invisible, that's the point of plainer. Just try a rounded corner to input:
+  This will be completely invisible, that's the point of thePplainer. Just try a rounded corner for input:
 
   ```xml
   <Frame BorderColor="Blue" CornerRadius="20" Padding="5">
