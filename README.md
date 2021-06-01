@@ -103,7 +103,7 @@ No underlines, no borders, no background colors. Just interactive fields without
 
 
 
-You can create this view vith following code:
+You can create this view with following code:
 
 ```xml
 <StackLayout Spacing="20" Padding="40,20">
