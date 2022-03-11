@@ -13,7 +13,22 @@ No underlines, no borders, no background colors. Just interactive fields without
 
 ***
 
-## Set-up
+## Getting Started on MAUI
+
+- Install `Plainer.Maui` nuget package to your project.
+
+- Go to **MauiProgram.cs** and add Plainer handlers
+
+  ```csharp
+  builder.ConfigureMauiHandlers(handlers =>
+  {
+    handlers.AddPlainer();
+  });
+  ```
+  
+---
+
+## Getting Started on Xamarin Forms
 
 - Install `Xamarin.Forms.Plainer` to each platform
 
