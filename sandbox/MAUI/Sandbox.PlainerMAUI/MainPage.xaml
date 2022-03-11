@@ -13,7 +13,7 @@
 
             <StackLayout VerticalOptions="Fill">
                 <Label Text="EditorView"/>
-                <controls:EditorView HeightRequest="300" TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}"/>
+                <controls:EditorView HeightRequest="150" TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}"/>
             </StackLayout>
 
             <!--<StackLayout>
