@@ -13,7 +13,8 @@ public static class MauiHandlerCollectionExtensions
             .AddHandler(typeof(EditorView), typeof(EditorViewHandler))
             .AddHandler(typeof(PickerView), typeof(PickerViewHandler))
             .AddHandler(typeof(DatePickerView), typeof(DatePickerViewHandler))
-            ;
+            .AddHandler(typeof(TimePickerView), typeof(TimePickerViewHandler));
+
         return handlers;
     }
 }
