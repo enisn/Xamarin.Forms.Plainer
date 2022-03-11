@@ -1,4 +1,7 @@
-﻿namespace Sandbox.PlainerMAUI;
+﻿using Microsoft.Maui.Hosting;
+using Plainer.Maui;
+
+namespace Sandbox.PlainerMAUI;
 
 public static class MauiProgram
 {
@@ -11,6 +14,11 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 			});
+
+		builder.ConfigureMauiHandlers(handlers =>
+		{
+			handlers.AddPlainer();
+		});
 
 		return builder.Build();
 	}

@@ -8,6 +8,9 @@
             <Color x:Key="PrimaryColor">#512bdf</Color>
             <Color x:Key="SecondaryColor">White</Color>
 
+            <Color x:Key="TextColor">Blue</Color>
+            <Color x:Key="BackgroundColor">WhiteSmoke</Color>
+
             <Style TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource PrimaryColor}" />
                 <Setter Property="FontFamily" Value="OpenSansRegular" />
