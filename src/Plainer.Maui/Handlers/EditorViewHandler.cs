@@ -12,6 +12,10 @@ namespace Plainer.Maui.Handlers;
 
 public partial class EditorViewHandler : EditorHandler
 {
+    public EditorViewHandler()
+    {
+    }
+
     public EditorViewHandler(IPropertyMapper mapper = null) : base(mapper)
     {
     }

@@ -10,9 +10,12 @@ using Microsoft.Maui.Controls.Platform;
 
 namespace Plainer.Maui.Handlers;
 
-
 public partial class EntryViewHandler : EntryHandler
 {
+    public EntryViewHandler()
+    {
+    }
+
     public EntryViewHandler(IPropertyMapper mapper = null) : base(mapper)
     {
     }
