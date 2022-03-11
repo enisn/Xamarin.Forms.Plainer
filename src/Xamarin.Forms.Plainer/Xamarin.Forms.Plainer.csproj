@@ -2,6 +2,8 @@
 
   <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
 
+  <Import Project="..\..\common.props" />
+  
   <PropertyGroup>
     <!--Work around so the conditions work below-->
     <!--<TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">netstandard1.0;netstandard2.0;Xamarin.iOS10;MonoAndroid90;MonoAndroid10.0;uap10.0.16299</TargetFrameworks>

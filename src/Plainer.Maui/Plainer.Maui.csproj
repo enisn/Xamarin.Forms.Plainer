@@ -1,5 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  	<Import Project="..\..\common.props" />
+
 	<PropertyGroup>
 		<TargetFrameworks>net6.0;net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows')) and '$(MSBuildRuntimeType)' == 'Full'">$(TargetFrameworks);net6.0-windows10.0.19041</TargetFrameworks>
@@ -15,26 +17,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<Product>$(AssemblyName) ($(TargetFramework))</Product>
-		<PackageVersion>1.0.0</PackageVersion>
-		<PackOnBuild>false</PackOnBuild>
-		<NeutralLanguage>en</NeutralLanguage>
-		<LangVersion>default</LangVersion>
-		<DefineConstants>$(DefineConstants);</DefineConstants>	<PackageLicenseUrl>LINK TO LICENSE</PackageLicenseUrl>
-		<PackageProjectUrl>https://github.com/enisn/Xamarin.Forms.Plainer</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/enisn/Xamarin.Forms.Plainer</RepositoryUrl>
-		<PackageReleaseNotes>Initial Release</PackageReleaseNotes>
-		<PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, Plainer, empty, empty entry</PackageTags>
-
-		<Title>MAUI Plainer</Title>
-		<Summary>Removes visual effects from controls and makes them plain.</Summary>
-		<Description>This library removes all visual effects from controls and makes them easy to style from portable layer instead of writing custom renderers always.</Description>
-
-		<Owners>enisn</Owners>
-		<Authors>enisn</Authors>
-		<Copyright>Copyright 2022</Copyright>
-
-		<DisableExtraReferences>true</DisableExtraReferences>
+    	<Title>MAUI Plainer</Title>
 		<PackageIcon>icon.png</PackageIcon>
 		<PackageIconUrl />
 	</PropertyGroup>

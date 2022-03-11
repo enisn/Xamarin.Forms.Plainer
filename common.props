@@ -1,0 +1,24 @@
+<Project>
+  <PropertyGroup>
+    <Product>$(AssemblyName) ($(TargetFramework))</Product>
+    <PackageVersion>1.2.0</PackageVersion>
+    <PackOnBuild>false</PackOnBuild>
+    <NeutralLanguage>en</NeutralLanguage>
+    <LangVersion>latest</LangVersion>
+    <DefineConstants>$(DefineConstants);</DefineConstants>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/enisn/Xamarin.Forms.Plainer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/enisn/Xamarin.Forms.Plainer</RepositoryUrl>
+    <PackageReleaseNotes>MAUI Support</PackageReleaseNotes>
+    <PackageTags>xamarin, windows, ios, android, xamarin.forms, plugin, Plainer, empty, empty entry</PackageTags>
+
+    <Summary>Removes visual effects from controls and makes them plain.</Summary>
+    <Description>This library removes all visual effects from controls and makes them easy to style.</Description>
+
+    <Owners>enisn</Owners>
+    <Authors>enisn</Authors>
+    <Copyright>Copyright 2022</Copyright>
+
+    <DisableExtraReferences>true</DisableExtraReferences>
+  </PropertyGroup>
+</Project>
