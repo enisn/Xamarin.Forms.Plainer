@@ -7,6 +7,9 @@ using Microsoft.Maui.Controls.Platform;
 #if IOS || MACCATALYST
 using UIKit;
 #endif
+#if WINDOWS
+using Microsoft.UI.Xaml.Controls;
+#endif
 
 namespace Plainer.Maui.Handlers;
 
@@ -53,6 +56,14 @@ public partial class DatePickerViewHandler : DatePickerHandler
 }
 #endif
 
-// WINDOWS
-
-// Control.BorderThickness = new Windows.UI.Xaml.Thickness(0);
+#if WINDOWS
+public partial class DatePickerViewHandler : DatePickerHandler
+{
+    protected override CalendarDatePicker CreateNativeView()
+    {
+        var nativeView = base.CreateNativeView();
+        nativeView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
+        return nativeView;
+    }
+}
+#endif

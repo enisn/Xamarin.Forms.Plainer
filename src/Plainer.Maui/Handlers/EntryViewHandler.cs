@@ -8,6 +8,11 @@ using AndroidX.AppCompat.Widget;
 using Microsoft.Maui.Controls.Platform;
 #endif
 
+#if WINDOWS
+using Microsoft.UI.Xaml.Controls;
+using Windows.UI.Notifications;
+#endif
+
 namespace Plainer.Maui.Handlers;
 
 public partial class EntryViewHandler : EntryHandler
@@ -53,3 +58,15 @@ public partial class EntryViewHandler  : EntryHandler
 }
 #endif
 
+#if WINDOWS
+public partial class EntryViewHandler : EntryHandler
+{
+    protected override TextBox CreateNativeView()
+    {
+        var nativeView = base.CreateNativeView();
+
+        nativeView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
+        return nativeView;
+    }
+}
+#endif
