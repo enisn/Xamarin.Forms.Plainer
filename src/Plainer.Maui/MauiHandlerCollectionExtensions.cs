@@ -6,9 +6,14 @@ namespace Plainer.Maui;
 
 public static class MauiHandlerCollectionExtensions
 {
-    public static void AddPlainer(this IMauiHandlersCollection handlers)
+    public static IMauiHandlersCollection AddPlainer(this IMauiHandlersCollection handlers)
     {
-        handlers.AddHandler(typeof(EntryView), typeof(EntryViewHandler));
+        handlers
+            .AddHandler(typeof(EntryView), typeof(EntryViewHandler))
+            .AddHandler(typeof(EditorView), typeof(EditorViewHandler))
+            .AddHandler(typeof(DatePickerView), typeof(DatePickerViewHandler))
+            ;
+        return handlers;
     }
 }
 

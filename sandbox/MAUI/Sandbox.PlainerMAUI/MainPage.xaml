@@ -16,7 +16,7 @@
                 <controls:EditorView HeightRequest="150" TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}"/>
             </StackLayout>
 
-            <!--<StackLayout>
+            <StackLayout>
                 <Label Text="PickerView"/>
                 <controls:PickerView TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}">
                     <controls:PickerView.ItemsSource>
@@ -37,7 +37,7 @@
             <StackLayout>
                 <Label Text="DatePickerView"/>
                 <controls:DatePickerView TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}"/>
-            </StackLayout>-->
+            </StackLayout>
 
         </StackLayout>
     </ScrollView>
