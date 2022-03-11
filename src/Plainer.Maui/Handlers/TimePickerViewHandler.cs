@@ -33,7 +33,7 @@ public partial class TimePickerViewHandler : TimePickerHandler
 #endif
 
 #if IOS || MACCATALYST
-public  class TimePickerViewHandler : TimePickerHandler
+public partial class TimePickerViewHandler : TimePickerHandler
 {
     protected override MauiTimePicker CreateNativeView()
     {
