@@ -11,6 +11,7 @@ public static class MauiHandlerCollectionExtensions
         handlers
             .AddHandler(typeof(EntryView), typeof(EntryViewHandler))
             .AddHandler(typeof(EditorView), typeof(EditorViewHandler))
+            .AddHandler(typeof(PickerView), typeof(PickerViewHandler))
             .AddHandler(typeof(DatePickerView), typeof(DatePickerViewHandler))
             ;
         return handlers;
