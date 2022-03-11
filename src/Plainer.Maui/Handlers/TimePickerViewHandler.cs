@@ -47,6 +47,17 @@ public partial class TimePickerViewHandler : TimePickerHandler
 }
 #endif
 
-// WINDOWS
+#if WINDOWS
+public partial class TimePickerViewHandler : TimePickerHandler
+{
+    protected override Microsoft.UI.Xaml.Controls.TimePicker CreateNativeView()
+    {
+        var nativeView = base.CreateNativeView();
 
+        nativeView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
+
+        return nativeView;
+    }
+}
+#endif
 //  Control.BorderThickness = new Windows.UI.Xaml.Thickness(0);

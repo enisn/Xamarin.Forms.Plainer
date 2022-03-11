@@ -53,6 +53,16 @@ public partial class PickerViewHandler : PickerHandler
 }
 #endif
 
-// WINDOWS
+#if WINDOWS
+public partial class PickerViewHandler : PickerHandler
+{
+    protected override MauiComboBox CreateNativeView()
+    {
+        var nativeView = base.CreateNativeView();
 
-// Control.BorderThickness = new Windows.UI.Xaml.Thickness(0);
+        nativeView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
+
+        return nativeView;
+    }
+}
+#endif

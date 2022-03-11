@@ -8,6 +8,10 @@ using AndroidX.AppCompat.Widget;
 using Microsoft.Maui.Controls.Platform;
 #endif
 
+#if WINDOWS
+using Microsoft.UI.Xaml.Controls;
+#endif
+
 namespace Plainer.Maui.Handlers;
 
 public partial class EditorViewHandler : EditorHandler
@@ -48,4 +52,16 @@ public partial class EditorViewHandler : EditorHandler
 }
 #endif
 
-//WINDOWS IMPLEMENTATION HERE
+#if WINDOWS
+public partial class EditorViewHandler : EditorHandler
+{
+    protected override TextBox CreateNativeView()
+    {
+        var nativeView = base.CreateNativeView();
+
+        nativeView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
+
+        return nativeView;
+    }
+}
+#endif
