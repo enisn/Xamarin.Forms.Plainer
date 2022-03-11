@@ -3,6 +3,7 @@ using Microsoft.Maui.Platform;
 
 #if ANDROID
 using Android.Graphics.Drawables;
+using Microsoft.Maui.Controls.Platform;
 #endif
 
 namespace Plainer.Maui.Handlers;
@@ -24,7 +25,7 @@ public partial class TimePickerViewHandler : TimePickerHandler
         using (var gradientDrawable = new GradientDrawable())
         {
             gradientDrawable.SetColor(global::Android.Graphics.Color.Transparent);
-            this.Control.SetBackground(gradientDrawable);
+            nativeView.SetBackground(gradientDrawable);
         }
 
         return nativeView;

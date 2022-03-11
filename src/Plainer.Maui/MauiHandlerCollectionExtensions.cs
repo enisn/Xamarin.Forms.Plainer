@@ -18,4 +18,3 @@ public static class MauiHandlerCollectionExtensions
         return handlers;
     }
 }
-
