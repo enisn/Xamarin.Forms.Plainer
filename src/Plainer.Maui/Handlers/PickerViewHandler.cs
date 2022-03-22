@@ -24,9 +24,9 @@ public partial class PickerViewHandler : PickerHandler
 #if ANDROID
 public partial class PickerViewHandler : PickerHandler
 {
-    protected override MauiPicker CreateNativeView()
+    protected override MauiPicker CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         using (var gradientDrawable = new GradientDrawable())
         {
@@ -42,9 +42,9 @@ public partial class PickerViewHandler : PickerHandler
 #if IOS || MACCATALYST
 public partial class PickerViewHandler : PickerHandler
 {
-    protected override MauiPicker CreateNativeView()
+    protected override MauiPicker CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         nativeView.BorderStyle = UITextBorderStyle.None;
 
@@ -56,9 +56,9 @@ public partial class PickerViewHandler : PickerHandler
 #if WINDOWS
 public partial class PickerViewHandler : PickerHandler
 {
-    protected override MauiComboBox CreateNativeView()
+    protected override MauiComboBox CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         nativeView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
 

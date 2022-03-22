@@ -27,9 +27,9 @@ public partial class DatePickerViewHandler : DatePickerHandler
 #if ANDROID
 public partial class DatePickerViewHandler : DatePickerHandler
 {
-    protected override MauiDatePicker CreateNativeView()
+    protected override MauiDatePicker CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         using (var gradientDrawable = new GradientDrawable())
         {
@@ -45,9 +45,9 @@ public partial class DatePickerViewHandler : DatePickerHandler
 #if IOS || MACCATALYST
 public partial class DatePickerViewHandler : DatePickerHandler
 {
-    protected override MauiDatePicker CreateNativeView()
+    protected override MauiDatePicker CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         nativeView.BorderStyle = UITextBorderStyle.None;
 
@@ -59,9 +59,9 @@ public partial class DatePickerViewHandler : DatePickerHandler
 #if WINDOWS
 public partial class DatePickerViewHandler : DatePickerHandler
 {
-    protected override CalendarDatePicker CreateNativeView()
+    protected override CalendarDatePicker CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
         nativeView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
         return nativeView;
     }

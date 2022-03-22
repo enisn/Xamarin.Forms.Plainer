@@ -28,9 +28,9 @@ public partial class EditorViewHandler : EditorHandler
 #if ANDROID
 public partial class EditorViewHandler : EditorHandler
 {
-    protected override AppCompatEditText CreateNativeView()
+    protected override AppCompatEditText CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         using (var gradientDrawable = new GradientDrawable())
         {
@@ -55,9 +55,9 @@ public partial class EditorViewHandler : EditorHandler
 #if WINDOWS
 public partial class EditorViewHandler : EditorHandler
 {
-    protected override TextBox CreateNativeView()
+    protected override TextBox CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         nativeView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
 
