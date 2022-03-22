@@ -29,9 +29,9 @@ public partial class EntryViewHandler : EntryHandler
 #if ANDROID
 public partial class EntryViewHandler : EntryHandler
 {
-    protected override AppCompatEditText CreateNativeView()
+    protected override AppCompatEditText CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         using (var gradientDrawable = new GradientDrawable())
         {
@@ -47,9 +47,9 @@ public partial class EntryViewHandler : EntryHandler
 #if IOS || MACCATALYST
 public partial class EntryViewHandler  : EntryHandler
 {
-    protected override MauiTextField CreateNativeView()
+    protected override MauiTextField CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         nativeView.BorderStyle = UIKit.UITextBorderStyle.None;
 
@@ -61,9 +61,9 @@ public partial class EntryViewHandler  : EntryHandler
 #if WINDOWS
 public partial class EntryViewHandler : EntryHandler
 {
-    protected override TextBox CreateNativeView()
+    protected override TextBox CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         nativeView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
         return nativeView;

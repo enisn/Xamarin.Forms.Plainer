@@ -18,9 +18,9 @@ public partial class TimePickerViewHandler : TimePickerHandler
 #if ANDROID
 public partial class TimePickerViewHandler : TimePickerHandler
 {
-    protected override MauiTimePicker CreateNativeView()
+    protected override MauiTimePicker CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         using (var gradientDrawable = new GradientDrawable())
         {
@@ -36,9 +36,9 @@ public partial class TimePickerViewHandler : TimePickerHandler
 #if IOS || MACCATALYST
 public partial class TimePickerViewHandler : TimePickerHandler
 {
-    protected override MauiTimePicker CreateNativeView()
+    protected override MauiTimePicker CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         nativeView.BorderStyle = UIKit.UITextBorderStyle.None;
 
@@ -50,9 +50,9 @@ public partial class TimePickerViewHandler : TimePickerHandler
 #if WINDOWS
 public partial class TimePickerViewHandler : TimePickerHandler
 {
-    protected override Microsoft.UI.Xaml.Controls.TimePicker CreateNativeView()
+    protected override Microsoft.UI.Xaml.Controls.TimePicker CreatePlatformView()
     {
-        var nativeView = base.CreateNativeView();
+        var nativeView = base.CreatePlatformView();
 
         nativeView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
 
