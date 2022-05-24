@@ -1,6 +1,7 @@
 ﻿using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
 #if ANDROID
+using Android.App;
 using Android.Graphics.Drawables;
 using Microsoft.Maui.Controls.Platform;
 #endif
@@ -42,7 +43,7 @@ public partial class DatePickerViewHandler : DatePickerHandler
 }
 #endif
 
-#if IOS || MACCATALYST
+#if IOS
 public partial class DatePickerViewHandler : DatePickerHandler
 {
     protected override MauiDatePicker CreatePlatformView()
@@ -50,6 +51,21 @@ public partial class DatePickerViewHandler : DatePickerHandler
         var nativeView = base.CreatePlatformView();
 
         nativeView.BorderStyle = UITextBorderStyle.None;
+
+        return nativeView;
+    }
+
+}
+#endif
+
+#if MACCATALYST
+public partial class DatePickerViewHandler : DatePickerHandler
+{
+    protected override UIDatePicker CreatePlatformView()
+    {
+        var nativeView = base.CreatePlatformView();
+
+        nativeView.Alpha = 0f;
 
         return nativeView;
     }

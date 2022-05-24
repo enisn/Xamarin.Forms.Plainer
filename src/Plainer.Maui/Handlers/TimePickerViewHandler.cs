@@ -1,5 +1,8 @@
 ﻿using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
+#if IOS || MACCATALYST
+using UIKit;
+#endif
 
 #if ANDROID
 using Android.Graphics.Drawables;
@@ -33,7 +36,7 @@ public partial class TimePickerViewHandler : TimePickerHandler
 }
 #endif
 
-#if IOS || MACCATALYST
+#if IOS
 public partial class TimePickerViewHandler : TimePickerHandler
 {
     protected override MauiTimePicker CreatePlatformView()
@@ -41,6 +44,20 @@ public partial class TimePickerViewHandler : TimePickerHandler
         var nativeView = base.CreatePlatformView();
 
         nativeView.BorderStyle = UIKit.UITextBorderStyle.None;
+
+        return nativeView;
+    }
+}
+#endif
+
+#if MACCATALYST
+public partial class TimePickerViewHandler : TimePickerHandler
+{
+    protected override UIDatePicker CreatePlatformView()
+    {
+        var nativeView = base.CreatePlatformView();
+
+        nativeView.Alpha = 0f;
 
         return nativeView;
     }
@@ -60,4 +77,3 @@ public partial class TimePickerViewHandler : TimePickerHandler
     }
 }
 #endif
-//  Control.BorderThickness = new Windows.UI.Xaml.Thickness(0);
