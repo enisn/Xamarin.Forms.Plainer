@@ -1,9 +1,15 @@
 ﻿using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
+
+#if WINDOWS
+using Microsoft.UI.Xaml.Controls;
+#endif
+
 #if ANDROID
 using Android.Graphics.Drawables;
 using Microsoft.Maui.Controls.Platform;
 #endif
+
 #if IOS || MACCATALYST
 using UIKit;
 #endif
@@ -56,7 +62,7 @@ public partial class PickerViewHandler : PickerHandler
 #if WINDOWS
 public partial class PickerViewHandler : PickerHandler
 {
-    protected override MauiComboBox CreatePlatformView()
+    protected override ComboBox CreatePlatformView()
     {
         var nativeView = base.CreatePlatformView();
 
