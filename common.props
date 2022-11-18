@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
     <Product>$(AssemblyName) ($(TargetFramework))</Product>
-    <PackageVersion>1.6.0</PackageVersion>
+    <PackageVersion>1.6.1</PackageVersion>
     <PackOnBuild>false</PackOnBuild>
     <NeutralLanguage>en</NeutralLanguage>
     <LangVersion>latest</LangVersion>
