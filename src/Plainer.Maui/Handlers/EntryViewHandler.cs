@@ -66,6 +66,7 @@ public partial class EntryViewHandler : EntryHandler
         var nativeView = base.CreatePlatformView();
 
         nativeView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
+        nativeView.Style = null;
         return nativeView;
     }
 }
