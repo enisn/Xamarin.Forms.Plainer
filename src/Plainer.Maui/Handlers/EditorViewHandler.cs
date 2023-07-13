@@ -60,7 +60,7 @@ public partial class EditorViewHandler : EditorHandler
         var nativeView = base.CreatePlatformView();
 
         nativeView.BorderThickness = new Microsoft.UI.Xaml.Thickness(0);
-
+        nativeView.Style = null;
         return nativeView;
     }
 }
