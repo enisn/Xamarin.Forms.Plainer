@@ -6,6 +6,7 @@ using Microsoft.Maui.Platform;
 using Android.Graphics.Drawables;
 using AndroidX.AppCompat.Widget;
 using Microsoft.Maui.Controls.Platform;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 #endif
 
 #if WINDOWS
@@ -37,6 +38,7 @@ public partial class EntryViewHandler : EntryHandler
         {
             gradientDrawable.SetColor(global::Android.Graphics.Color.Transparent);
             nativeView.SetBackground(gradientDrawable);
+            nativeView.BackgroundTintList = Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
         }
 
         return nativeView;

@@ -8,17 +8,17 @@
         <StackLayout Spacing="20" Padding="40,20">
             <StackLayout>
                 <Label Text="EntryView"/>
-                <controls:EntryView TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}"/>
+                <controls:EntryView TextColor="{StaticResource TextColor}"/>
             </StackLayout>
 
             <StackLayout VerticalOptions="Fill">
                 <Label Text="EditorView"/>
-                <controls:EditorView HeightRequest="150" TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}"/>
+                <controls:EditorView HeightRequest="150" TextColor="{StaticResource TextColor}"/>
             </StackLayout>
 
             <StackLayout>
                 <Label Text="PickerView"/>
-                <controls:PickerView TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}">
+                <controls:PickerView TextColor="{StaticResource TextColor}">
                     <controls:PickerView.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Option 1</x:String>
@@ -31,12 +31,12 @@
 
             <StackLayout>
                 <Label Text="TimePickerView"/>
-                <controls:TimePickerView TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}"/>
+                <controls:TimePickerView TextColor="{StaticResource TextColor}"/>
             </StackLayout>
 
             <StackLayout>
                 <Label Text="DatePickerView"/>
-                <controls:DatePickerView TextColor="{StaticResource TextColor}" BackgroundColor="{StaticResource BackgroundColor}"/>
+                <controls:DatePickerView TextColor="{StaticResource TextColor}"/>
             </StackLayout>
 
         </StackLayout>

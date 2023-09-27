@@ -1,9 +1,11 @@
 ﻿using Microsoft.Maui.Handlers;
 using Microsoft.Maui.Platform;
+
 #if ANDROID
 using Android.App;
 using Android.Graphics.Drawables;
 using Microsoft.Maui.Controls.Platform;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 #endif
 #if IOS || MACCATALYST
 using UIKit;
@@ -36,6 +38,7 @@ public partial class DatePickerViewHandler : DatePickerHandler
         {
             gradientDrawable.SetColor(global::Android.Graphics.Color.Transparent);
             nativeView.SetBackground(gradientDrawable);
+            nativeView.BackgroundTintList = Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
         }
 
         return nativeView;

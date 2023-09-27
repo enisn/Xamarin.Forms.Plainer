@@ -8,6 +8,7 @@ using Microsoft.UI.Xaml.Controls;
 #if ANDROID
 using Android.Graphics.Drawables;
 using Microsoft.Maui.Controls.Platform;
+using Microsoft.Maui.Controls.Compatibility.Platform.Android;
 #endif
 
 #if IOS || MACCATALYST
@@ -38,6 +39,7 @@ public partial class PickerViewHandler : PickerHandler
         {
             gradientDrawable.SetColor(global::Android.Graphics.Color.Transparent);
             nativeView.SetBackground(gradientDrawable);
+            nativeView.BackgroundTintList = Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
         }
 
         return nativeView;
