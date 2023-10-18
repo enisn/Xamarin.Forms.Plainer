@@ -72,7 +72,9 @@ No underlines, no borders, no background colors. Just interactive fields without
 
 - Go your XAML page and add following namespace:
 
-  `xmlns:plain="clr-namespace:Plugin.Plainer.Shared.Controls;assembly=Plugin.Plainer"`
+  | MAUI | `xmlns:controls="clr-namespace:Plainer.Maui.Controls;assembly=Plainer.Maui"` |
+  | --- | --- |
+  | Xamarin | `xmlns:plain="clr-namespace:Plugin.Plainer.Shared.Controls;assembly=Plugin.Plainer"` |
 
 - And you can start to use plain controls:
 
