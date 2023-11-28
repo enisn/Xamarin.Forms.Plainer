@@ -72,7 +72,7 @@ No underlines, no borders, no background colors. Just interactive fields without
 
 - Go your XAML page and add following namespace:
 
-  | MAUI | `xmlns:controls="clr-namespace:Plainer.Maui.Controls;assembly=Plainer.Maui"` |
+  | MAUI | `xmlns:plain="clr-namespace:Plainer.Maui.Controls;assembly=Plainer.Maui"` |
   | --- | --- |
   | Xamarin | `xmlns:plain="clr-namespace:Plugin.Plainer.Shared.Controls;assembly=Plugin.Plainer"` |
 
