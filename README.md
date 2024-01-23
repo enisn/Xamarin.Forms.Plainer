@@ -82,7 +82,7 @@ No underlines, no borders, no background colors. Just interactive fields without
   <plain:EntryView/>
   ```
 
-  This will be completely invisible, that's the point of thePplainer. Just try a rounded corner for input:
+  This will be completely invisible, that's the point of the Plainer. Just try a rounded corner for input:
 
   ```xml
   <Frame BorderColor="Blue" CornerRadius="20" Padding="5">
@@ -126,35 +126,35 @@ You can create this view with following code:
 <StackLayout Spacing="20" Padding="40,20">
   <StackLayout>
     <Label Text="EntryView"/>
-    <controls:EntryView TextColor="Blue" BackgroundColor="WhiteSmoke"/>
+    <plain:EntryView TextColor="Blue" BackgroundColor="WhiteSmoke"/>
   </StackLayout>
 
   <StackLayout>
     <Label Text="EditorPickerView"/>
-    <controls:EditorView HeightRequest="120" TextColor="Blue" BackgroundColor="WhiteSmoke"/>
+    <plain:EditorView HeightRequest="120" TextColor="Blue" BackgroundColor="WhiteSmoke"/>
   </StackLayout>
 
   <StackLayout>
     <Label Text="PickerView"/>
-    <controls:PickerView TextColor="Blue" BackgroundColor="WhiteSmoke">
-      <controls:PickerView.ItemsSource>
+    <plain:PickerView TextColor="Blue" BackgroundColor="WhiteSmoke">
+      <plain:PickerView.ItemsSource>
         <x:Array Type="{x:Type x:String}">
           <x:String>Option 1</x:String>
           <x:String>Option 2</x:String>
           <x:String>Option 3</x:String>
         </x:Array>
-      </controls:PickerView.ItemsSource>
-    </controls:PickerView>
+      </plain:PickerView.ItemsSource>
+    </plain:PickerView>
   </StackLayout>
 
   <StackLayout>
     <Label Text="TimePickerView"/>
-    <controls:TimePickerView TextColor="Blue" BackgroundColor="WhiteSmoke"/>
+    <plain:TimePickerView TextColor="Blue" BackgroundColor="WhiteSmoke"/>
   </StackLayout>
 
   <StackLayout>
     <Label Text="DatePickerView"/>
-    <controls:DatePickerView TextColor="Blue" BackgroundColor="WhiteSmoke"/>
+    <plain:DatePickerView TextColor="Blue" BackgroundColor="WhiteSmoke"/>
   </StackLayout>
 
 </StackLayout>
