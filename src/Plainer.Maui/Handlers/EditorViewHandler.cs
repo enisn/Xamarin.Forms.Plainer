@@ -29,7 +29,7 @@ public partial class EditorViewHandler : EditorHandler
 #if ANDROID
 public partial class EditorViewHandler : EditorHandler
 {
-    protected override AppCompatEditText CreatePlatformView()
+    protected override MauiAppCompatEditText CreatePlatformView()
     {
         var nativeView = base.CreatePlatformView();
 
@@ -37,7 +37,7 @@ public partial class EditorViewHandler : EditorHandler
         {
             gradientDrawable.SetColor(global::Android.Graphics.Color.Transparent);
             nativeView.SetBackground(gradientDrawable);
-            nativeView.BackgroundTintList = Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToAndroid());
+            nativeView.BackgroundTintList = Android.Content.Res.ColorStateList.ValueOf(Colors.Transparent.ToPlatform());
         }
 
         return nativeView;
